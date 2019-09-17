@@ -1,0 +1,27 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [{
+        "Sid": "DenyLambdaFunctionsChanges",
+        "Effect": "Deny",
+        "Action": [
+            "lambda:AddPermission",
+            "lambda:CreateAlias",
+            "lambda:CreateEventSourceMapping",
+            "lambda:CreateFunction",
+            "lambda:DeleteAlias",
+            "lambda:DeleteEventSourceMapping",
+            "lambda:DeleteFunction",
+            "lambda:PublishVersion",
+            "lambda:RemovePermission",
+            "lambda:TagResource",
+            "lambda:UntagResource",
+            "lambda:UpdateAlias",
+            "lambda:UpdateEventSourceMapping",
+            "lambda:UpdateFunctionCode",
+            "lambda:UpdateFunctionConfiguration"
+        ],
+        "Resource": [
+            "*"
+        ]
+    }]
+}

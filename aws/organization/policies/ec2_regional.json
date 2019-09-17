@@ -1,0 +1,20 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [{
+        "Sid": "DenyUnapprovedRegions",
+        "Effect": "Deny",
+        "Action": [
+            "ec2:*"
+        ],
+        "Resource": [
+            "*"
+        ],
+        "Condition": {
+            "StringNotEquals": {
+                "ec2:Region": [
+                    "us-west-2"
+                ]
+            }
+        }
+    }]
+}

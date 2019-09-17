@@ -1,0 +1,17 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [{
+        "Sid": "DenyWhenMFANotPresent",
+        "Effect": "Deny",
+        "Action": [
+            "ec2:StopInstances",
+            "ec2:TerminateInstances"
+        ],
+        "Resource": "*",
+        "Condition": {
+            "BoolIfExists": {
+                "aws:MultiFactorAuthPresent": false
+            }
+        }
+    }]
+}
