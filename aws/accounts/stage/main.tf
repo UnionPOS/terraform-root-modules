@@ -4,6 +4,7 @@ resource "aws_organizations_account" "default" {
   email                      = "${format(var.account_email, var.stage)}"
   iam_user_access_to_billing = "${var.account_iam_user_access_to_billing}"
   role_name                  = "${var.account_role_name}"
+  parent_id                  = "${var.account_parent_ou}"
 }
 
 locals {
